@@ -73,3 +73,25 @@ type ReplaceDiff struct {
 	replaceTyoe string
 	data        string
 }
+
+//SubtreeRevision
+type SubtreeRevision struct {
+	revisionTimestamp  string
+    revisionNumber     uint
+}
+
+//Metadata
+type Metadata struct {
+	nodeKey         int
+	hash            int
+	nt              NodeType
+	descendantCount int
+	childCount      int
+}
+
+//MetaNode
+type MetaNode struct {
+	metadata Metadata
+	key      string
+	value    string
+}
