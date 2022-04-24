@@ -76,22 +76,22 @@ type ReplaceDiff struct {
 
 //SubtreeRevision
 type SubtreeRevision struct {
-	revisionTimestamp  string
-    revisionNumber     uint
+	revisionTimestamp  string `json:"revisionTimestamp" binding:"required"`
+    revisionNumber     uint   `json:"revisionNumber" binding:"required"`
 }
 
 //Metadata
 type Metadata struct {
-	nodeKey         int
-	hash            int
-	nt              NodeType
-	descendantCount int
-	childCount      int
+	nodeKey         int      `json:"nodeKey" binding:"required"`
+	hash            int      `json:"hash" binding:"required"`
+	nt              NodeType `json:"nt" binding:"required"`
+	descendantCount int      `json:"descendant" binding:"required"`
+	childCount      int      `json:"childCount" binding:"required"`
 }
 
 //MetaNode
 type MetaNode struct {
-	metadata Metadata
-	key      string
-	value    string
+	metadata Metadata `json:"metadata" binding:"required"`
+	key      string   `json:"key" binding:"required"`
+	value    string   `json:"value" binding:"required"`
 }
